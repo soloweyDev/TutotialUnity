@@ -10,6 +10,6 @@ public class Target : MonoBehaviour
     {
         Debug.Log("damag - " + damag + ", heatlth - " + health);
         health -= damag;
-        Debug.Log(heatlth - " + health);
+        Debug.Log("heatlth - " + health);
     }
 }
