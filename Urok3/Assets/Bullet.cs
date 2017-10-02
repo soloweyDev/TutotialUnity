@@ -11,9 +11,12 @@ public class Bullet : MonoBehaviour
 	void OnCollisionEnter (Collision collision)
 	{
 	    Target target = collision.gameObject.GetComponent<Target>();
-	    target.Hit(ammoStrength);
-	    Destroy(gameObject);
-	}
+        if (target != null)
+        {
+            target.Hit(ammoStrength);
+            Destroy(gameObject);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()
